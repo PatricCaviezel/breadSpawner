@@ -5,7 +5,7 @@
 pie
   title Investors
   "Jon" : 5
-  "Some Chinese Guy" : 5
+  "Pairry" : 5
   "Patric" : 90
 ```
 
