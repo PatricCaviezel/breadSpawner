@@ -1,7 +1,17 @@
 let genRandomNumber = () => {
-    let top = Math.floor(Math.random() * (document.body.offsetHeight - 30));
-    let left = Math.floor(Math.random() * (document.body.offsetWidth - 50));
+    let top = Math.floor(Math.random() * (document.body.offsetHeight - 40));
+    let left = Math.floor(Math.random() * (document.body.offsetWidth - 60));
     return [top, left];
+}
+
+let moveElement = () => {
+    let elem = document.getElementById('golden');
+    var maxX = window.innerWidth - elem.offsetWidth;
+    var maxY = window.innerHeight - elem.offsetHeight;
+    var newX = Math.floor(Math.random() * maxX);
+    var newY = Math.floor(Math.random() * maxY);
+    elem.style.left = newX + "px";
+    elem.style.top = newY + "px";
 }
 
 let createImage = () => {
@@ -14,7 +24,6 @@ let createImage = () => {
     document.body.appendChild(img);
     img.style.left = left + "px";
     img.style.top = top + "px";
-    counter++;
 }
 
 let handleClick = (e) => {
@@ -27,10 +36,12 @@ let createGoldenImage = () => {
     img.classList.add("picture");
     img.classList.add("golden");
     img.setAttribute('src', './golden.png');
-    img.addEventListener('click', handleClick);
-    document.body.appendChild(img);
+    img.setAttribute('id', 'golden');
     img.style.left = left + "px";
     img.style.top = top + "px";
+    img.addEventListener('click', handleClick);
+    img.addEventListener('mouseover', moveElement);
+    document.body.appendChild(img);
 }
 
 let spawn = () => {
