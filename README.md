@@ -5,7 +5,8 @@
 pie
   title Investors
   "Jon" : 5
-  "Patric" : 95
+  "Some Chinese Guy" : 5
+  "Patric" : 90
 ```
 
 ## Ideas
