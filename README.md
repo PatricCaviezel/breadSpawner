@@ -3,7 +3,7 @@
 ## Investors
 ```mermaid
 pie
-  Investors
+  pie title Investors
   "Jon" : 5
   "Patric" : 95
 ```
