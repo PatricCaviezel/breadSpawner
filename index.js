@@ -20,7 +20,7 @@ let createImage = () => {
     let img = document.createElement('img');
     img.style.transform = `rotate(${randomDeg}deg)`;
     img.classList.add("picture");
-    img.setAttribute('src', './bread.png');
+    img.setAttribute('src', './images/bread.png');
     document.body.appendChild(img);
     img.style.left = left + "px";
     img.style.top = top + "px";
@@ -31,11 +31,14 @@ let handleClick = (e) => {
 }
 
 let createGoldenImage = () => {
+    if (document.getElementById('golden')) {
+        document.getElementById('golden').remove();
+    }
     let [top, left] = genRandomNumber();
     let img = document.createElement('img');
     img.classList.add("picture");
     img.classList.add("golden");
-    img.setAttribute('src', './golden.png');
+    img.setAttribute('src', './images/golden.png');
     img.setAttribute('id', 'golden');
     img.style.left = left + "px";
     img.style.top = top + "px";
