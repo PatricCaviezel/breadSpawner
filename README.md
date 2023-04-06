@@ -2,8 +2,8 @@
 
 ## Investors
 ```mermaid
-pie
-  pie title Investors
+pie showData
+  title Investors
   "Jon" : 5
   "Patric" : 95
 ```
