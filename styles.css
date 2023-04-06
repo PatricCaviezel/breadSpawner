@@ -1,3 +1,7 @@
+button {
+    z-index: 100;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -24,4 +28,5 @@ body {
 
 .golden {
     animation: spin infinite 2s linear;
+    z-index: 50;
 }
