@@ -2,7 +2,7 @@
 
 ## Investors
 ```mermaid
-pie showData
+pie
   title Investors
   "Jon" : 5
   "Patric" : 95
