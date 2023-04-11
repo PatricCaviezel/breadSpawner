@@ -1,0 +1,56 @@
+#items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.imageField {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+body {
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+img {
+    width: 100px;
+    height: auto;
+
+}
+
+p {
+    display: grid;
+    place-content: center;
+}
