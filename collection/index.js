@@ -12,7 +12,7 @@ let createImageField = (image) => {
     return div;
 }
 let items = document.getElementById('items');
-let images = ["blue", "bread", "dora", "evil", "golden", "LSD", "red", "swiss"];
+let images = ["blue", "bread", "dora", "evil", "golden", "lsd", "red", "swiss"];
 
 for (let i = 0; i < images.length; i++) {
     let image = createImageField(images[i]);
