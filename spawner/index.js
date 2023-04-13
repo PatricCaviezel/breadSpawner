@@ -1,16 +1,13 @@
 let genRandomNumber = () => {
-
-    let top = Math.random() * ((document.body.offsetHeight - 50) - 45) + 45;
-    let left = Math.floor(Math.random() * (document.body.offsetWidth - 70));
+    let top = Math.random() * ((document.body.offsetHeight - 50) - 55) + 55;
+    let left = Math.floor(Math.random() * (document.body.offsetWidth - 65));
     return [top, left];
 }
 
 let moveElement = () => {
     let elem = document.getElementById('golden');
-    var maxX = window.innerWidth - elem.offsetWidth;
-    var maxY = window.innerHeight - elem.offsetHeight;
-    var newX = Math.floor(Math.random() * maxX);
-    var newY = Math.floor(Math.random() * maxY);
+    var newX = Math.floor(Math.random() * (document.body.offsetWidth - 65));
+    var newY = Math.random() * ((document.body.offsetHeight - 50) - 55) + 55;
     elem.style.left = newX + "px";
     elem.style.top = newY + "px";
 }
@@ -44,7 +41,9 @@ let createGoldenImage = () => {
     img.style.left = left + "px";
     img.style.top = top + "px";
     img.addEventListener('click', handleClick);
-    img.addEventListener('mouseover', moveElement);
+    img.addEventListener('mouseover', () => {
+        setTimeout(moveElement, 10)
+    });
     document.body.appendChild(img);
 }
 
