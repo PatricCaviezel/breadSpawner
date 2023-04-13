@@ -1,6 +1,7 @@
 let genRandomNumber = () => {
-    let top = Math.floor(Math.random() * (document.body.offsetHeight - 40));
-    let left = Math.floor(Math.random() * (document.body.offsetWidth - 60));
+
+    let top = Math.random() * ((document.body.offsetHeight - 50) - 45) + 45;
+    let left = Math.floor(Math.random() * (document.body.offsetWidth - 70));
     return [top, left];
 }
 
@@ -20,7 +21,7 @@ let createImage = () => {
     let img = document.createElement('img');
     img.style.transform = `rotate(${randomDeg}deg)`;
     img.classList.add("picture");
-    img.setAttribute('src', './images/bread.png');
+    img.setAttribute('src', '../images/bread.png');
     document.body.appendChild(img);
     img.style.left = left + "px";
     img.style.top = top + "px";
@@ -38,7 +39,7 @@ let createGoldenImage = () => {
     let img = document.createElement('img');
     img.classList.add("picture");
     img.classList.add("golden");
-    img.setAttribute('src', './images/golden.png');
+    img.setAttribute('src', '../images/golden.png');
     img.setAttribute('id', 'golden');
     img.style.left = left + "px";
     img.style.top = top + "px";
