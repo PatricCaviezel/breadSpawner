@@ -1,3 +1,14 @@
+#items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.imageField {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -34,7 +45,12 @@ body {
 }
 
 img {
-    margin-top: 100px;
-    width: 500px;
+    width: 100px;
     height: auto;
+
+}
+
+p {
+    display: grid;
+    place-content: center;
 }
